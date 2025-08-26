@@ -1,12 +1,13 @@
 {
-  "rewrites": [
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
