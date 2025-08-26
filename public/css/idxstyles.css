@@ -1,0 +1,578 @@
+* {
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+    --primary-blue: #4A81D9;
+    --primary-yellow: #F5D486;
+    --off-white: #FFF8F0;
+    --highlight: #FF4E50;
+    --text-color: #2F2B38;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.header {
+    height: 7rem;
+    width: 100%;
+    color: var(--primary-blue);
+    border-bottom: solid var(--primary-blue) 2px;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+    box-shadow: 10px 0px 10px #30303073;
+}
+
+#tibby-name {
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0;
+}
+
+.logo {
+    height: 90%;
+    width: auto;
+}
+
+.header ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.header ul li {
+    margin: 0 1.5rem;
+    font-size: 1.5em;
+}
+
+.link {
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+.link::after {
+    display: block;
+    content: "";
+    position: absolute;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-bottom: solid 2px var(--primary-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease-out;
+    z-index: -1;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+.contact {
+    background-color: var(--primary-blue);
+    color: var(--off-white);
+    padding: 0.15em 0.45em 0.2em;
+    border: solid 2px var(--primary-blue);
+    border-radius: 25px;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.contact:hover {
+    background-color: var(--off-white);
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.background-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    background-color: var(--off-white);
+}
+
+.bg-img {
+    position: absolute;
+    object-fit: cover;
+}
+
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+#splotch1 {
+    width: 60vmin;
+    height: 60vmin;
+    top: 20vh;
+    left: 2vw;
+    opacity: 70%;
+    animation: 0.75s ease-out 0.25s backwards floatIn;
+}
+
+#splotch2 {
+    width: 60vmin;
+    height: 60vmin;
+    right: 1vw;
+    bottom: 2vh;
+    animation: 0.75s ease-out 0.5s backwards floatIn;
+}
+
+#splotch3 {
+    position: absolute;
+    top: 50;
+    right: 50;
+    width: clamp(40em, 50vw, 70em);
+    height: auto;
+    transform: translate(-50%, -37.5%);
+    opacity: 50%;
+    z-index: -5;
+    animation: 0.75s ease-out 0.1s backwards fadeIn;
+}
+
+#flowers1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    opacity: 50%;
+}
+
+#flowers2 {
+    top: -3.5%;
+    right: -0.25%;
+    height: 25%;
+    width: auto;
+}
+
+#flowers1 img {
+    width: 100%;
+    height: auto;
+    transform: rotateZ(20deg);
+}
+
+main {
+    display: block;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.intro {
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
+    width: 80%;
+    margin: 10rem auto 0.75rem auto;
+}
+
+.intro-title {
+    font-family: "Lathusca", serif;
+    font-size: 100px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.intro-description {
+    font-size: 30px;
+    font-family: 'Lathusca', serif;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.shop-bg {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+    padding: 0 3em ;
+}
+
+.shop-container {
+    text-align: center;
+
+}
+
+.section-title {
+    font-family: "Lathusca", serif;
+    font-size: 70px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.watercolor-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
+    max-width: 1800px;
+}
+
+.digital-print-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 90%;
+    max-width: 1800px;
+}
+
+.product {
+    flex: 1 1 30%;
+    max-width: 32%;
+    height: auto;
+    text-align: center;
+    margin: 1rem 0 0.25rem 0;
+    color: var(--primary-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-holder {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 0.5em;
+}
+
+.image-holder img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product h2 {
+    margin: 0;
+    text-align: left;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.15rem;
+}
+
+.segmented-control {
+    display: inline-flex;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.option {
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: clamp(10px, .7vw, 30px);
+    font-weight: bold;
+    color: var(--primary-blue);
+    background: unset;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Left button rounded on the left side */
+.option:first-child {
+    border-radius: 50px 0 0 50px;
+}
+
+/* Right button rounded on the right side */
+.option:last-child {
+    border-radius: 0 50px 50px 0;
+}
+
+/* Active (selected) state */
+.option.active {
+  background: var(--primary-blue);
+  color: var(--off-white);
+}
+
+.dimensions {
+    margin: 0;
+    font-size: clamp(0.5rem, 1.5vw, 1.25rem);
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.cart-add {
+    padding: 0.5em 1em;
+    border: solid 2px var(--primary-blue);
+    background-color: var(--off-white);
+    border-radius: 25px;
+    color:var(--primary-blue);
+    font-family: sans-serif;
+    font-size: clamp(0.25rem, 1vw, 1rem);
+    font-weight: 700;
+    transition: color 1s;
+    transition: background-color 0.4s;
+    text-decoration: none;
+}
+
+.cart-add:hover {
+    background-color: var(--primary-blue);
+    color: var(--off-white);
+    cursor: pointer;
+}
+
+.cart-holder {
+    position: fixed;
+    height: 75px;
+    width: 75px;
+    background-color:var(--text-color);
+    border-radius:50%;
+    right: 35px;
+    bottom: 35px;
+    transition: background-color 0.2s;
+}
+
+.cart-holder:hover {
+    background-color: var(--primary-blue);
+}
+
+.cart-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    height: 60%;
+    width: 60%;
+}
+
+.cart-quantity {
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    color: var(--off-white);
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.bottom-description {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    color: var(--primary-blue)
+}
+
+/*Footer stuff*/
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1800px;
+    margin: 3rem auto;
+}
+
+.insta {
+    height: 50px;
+    width: 50px;
+}
+
+.insta img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+
+
+/*Animations & Media queries*/
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9)
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+@font-face {
+    font-family: 'Lathusca';
+    src: url('../fonts/Awesome\ Lathusca.ttf')
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        height: 60px;
+        padding: 0;
+    }
+
+    .header ul li {
+        margin: 0 0.5em;
+        font-size: clamp(15px, 0.5vw, 50px)
+    }
+
+    .header ul {
+        padding-left: 0;
+    }
+
+    main {
+        margin-top: -3rem;
+    }
+    
+    .intro-title {
+        font-size: clamp(40px, 1vw, 80px)
+    }
+
+    .intro-description {
+        font-size: clamp(15px, 0.5vw, 40px)
+    }
+
+    .container h2 {
+        font-size: clamp(15px, 1vw, 60px)
+    }
+
+    #splotch3 {
+        width: 120%;
+        max-width: 450px;
+        transform: translate(-50%, -35%);
+    }
+
+    .shop-bg {
+        padding: 0;
+    }
+
+    .shop-container {
+        width: 100%;
+        padding: 0;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: clamp(40px, 1vw, 80px);
+    }
+
+    .watercolor-container {
+        width: 99%;
+        justify-content: center;
+    }
+    
+    .watercolor-description {
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .digital-print-container {
+        width: 99%;
+        justify-content: center;
+    }
+
+    .digital-prints-description {
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .product {
+        flex: 0 0 auto;
+        max-width: unset;
+        height: auto;
+        width: 90%;
+        line-height: normal;
+    }
+
+    .product h2 {
+        font-size: clamp(15px, 3vw, 40px);
+    }
+
+    .dimensions {
+        font-size: clamp(10px, 4vw, 20px);
+    }
+
+    .cart-add {
+        font-size: clamp(10px, 2vw, 30px);
+    }
+
+    .top-row {
+        align-items: center;
+    }
+
+    .segmented-control {
+        height: clamp(1.75em, 100%, 4em);
+    }
+
+    .segmented-control button {
+        font-size: clamp(10px, 2vw, 30px);
+    }
+
+    .cart-holder {
+        height: clamp(40px, 6vw, 50px);
+        width: clamp(40px, 6vw, 50px);
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .cart-quantity {
+        font-size: 10px;
+    }
+
+    .bottom-description h2 {
+        font-size: clamp(15px, 5vw, 25px)
+    }
+
+    .footer-container {
+        margin: 1em auto;
+    }
+
+    .footer-container h1 {
+        font-size: clamp(15px, 5vw, 25px)
+    }
+
+    .footer-container p {
+        font-size: clamp(10px, 2.5vw, 25px)
+    }
+
+    .insta {
+        height: 25px;
+        width: 25px;
+    }
+}
