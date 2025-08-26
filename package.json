@@ -1,6 +1,9 @@
 {
   "name": "botaniq-gallery",
   "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p dist && cp *.html dist/ && cp -r css js img dist/"
+  },
   "dependencies": {
     "stripe": "^17.3.1"
   }
