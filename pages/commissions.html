@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/commstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/public/img/favicon.png">
+    <title>Commissions</title>
+</head>
+<body onload="updateQuantity(getCart())">
+    <header>
+        <div class="background-holder">
+            <span class="bg-img" id="splotch1"><img src='/public/img/orange splotch1.png'></span>
+            <span class="bg-img" id="splotch2"><img src='/public/img/orange splotch2.png'></span>
+        </div>
+        <div class="header">
+                <a class="logo" href="./index.html"><img class="logo" src="/public/img/logo.png"></a>
+                <ul>
+                    <li><a class="link" href="./index.html">Shop</a></li>
+                    <li><a class="link">Commissions</a></li>
+                    <li><a href="#email-form" class="contact">Contact</a></li>
+                </ul>
+        </div>
+    </header>
+    <main>
+        <div class="parallax-bg">
+            <div class=shadow><h1>Custom Artwork Commissions</h1></div>
+        </div>
+
+        <div class="page-title"></div>
+        <div class="container">
+            <div class=bouquet-wrapper>
+                <img class="bouquet-img" src="/public/img/comms-1.jpeg">
+            </div>
+                <p>I love doing commissions for watercolor, custom maps, and digital art, creating unique pieces tailored to each client. My work often captures meaningful moments and places, whether through hand-painted maps or delicate watercolor illustrations.</p>
+                <p>I transform your flower bouquets from special occasions (like from weddings, anniversaries, or other celebrations) into timeless watercolor paintings that preserve their beauty and sentiment. Each commission is a collaboration, designed to bring personal memories and stories to life through art.</p>
+                <p>Want a forever bouquet like my sister's? Let me know!</p>  
+        </div>
+
+        <a href="./cart.html">
+            <div class="cart-holder">
+                <img class="cart-img" src="/public/img/cart.png">
+                <span class="cart-quantity">0</span>
+            </div>
+        </a>
+    </main>
+    <div class="email-form" id="email-form">
+        <h1>Want to work together? Get in touch!</h1>
+        <form target="_blank" action="https://formsubmit.co/info@botaniqgallery.org" method="POST">
+            <div class="form-group">
+                <div class="form-row">
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="email-body">
+                    <textarea placeholder="Your Message" name="message" rows="10" required></textarea>
+                </div>
+            </div>
+            <button type="submit">Send!</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="socials">
+                <h1>Follow me!</h1>
+                <div class="insta"><a target="_blank" href='https://www.instagram.com/botaniqgallery/'><img src='/public/img/Instagram_icon.png'></a></div>
+            </div>
+            <div class="contact-info">
+                <h1>Botaniq Gallery</h1>
+                <p>+1 (609) 509-9409</p>
+                <p>info@botaniqgallery.org</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/public/js/index.js"></script>
+</body>
+</html>
