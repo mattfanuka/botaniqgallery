@@ -187,7 +187,8 @@ a {
     margin-top: 7rem;
 }
 
-.bouquet-wrapper {        
+.bouquet-wrapper {
+    flex: 0; 
     float: right;
     height: 400px;
     margin: 0 0 0 1rem;
@@ -394,6 +395,10 @@ a {
 @media screen and (max-width: 430px) {
     .form-row {
         flex-direction: column;
+    }
+
+    .shadow h1 {
+        font-size: clamp(15px, 7vw, 30px);
     }
 
     #name {
