@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
       "destination": "/pages/index.html"
