@@ -47,7 +47,6 @@ const query = `{
     try {
         const response = await fetch(URL);
         const data = await response.json();
-        console.log(data.result);
         return(data.result);
     } catch(err) {
         console.error('Error fetching paintings:', err);
@@ -90,7 +89,6 @@ async function renderProducts() {
                 ...product,
                 quantity: 1
             };
-            console.log(cartItem)
             addToCart(cartItem);
         })
             
@@ -201,7 +199,6 @@ function addToCart(cartItem) {
     let cart = getCart();
     //Check if it's a watercolor
     let isWaterColor = false;
-    console.log(isWaterColor)
     if (cartItem.type === 'watercolor') isWaterColor = true;
 
     //If its a watercolor, see if there's one in the cart. If not, add it
@@ -238,7 +235,6 @@ function addToCart(cartItem) {
 
 function updateQuantity(cart) {
     let quantity = 0;
-    console.log(cart);
 
     for (let i = 0; i < cart.length; i++){
         quantity += cart[i].quantity;
@@ -246,4 +242,5 @@ function updateQuantity(cart) {
 
     const quantityElement = document.querySelector('.cart-quantity');
     quantityElement.innerText = quantity;
+
 }
