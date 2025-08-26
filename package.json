@@ -1,11 +1,7 @@
 {
-  "name": "your-project-name",
+  "name": "botaniqgallery",
   "version": "1.0.0",
   "dependencies": {
-    "stripe": "^18.4.0"
-  },
-  "scripts": {
-    "build": "echo 'Build complete'",
-    "start": "echo 'Server started'"
+    "stripe": "^latest"
   }
 }
