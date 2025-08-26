@@ -1,7 +1,7 @@
 {
-  "name": "botaniqgallery",
+  "name": "botaniq-gallery",
   "version": "1.0.0",
   "dependencies": {
-    "stripe": "^latest"
+    "stripe": "^17.3.1"
   }
 }
