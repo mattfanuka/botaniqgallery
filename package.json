@@ -2,7 +2,7 @@
   "name": "botaniq-gallery",
   "version": "1.0.0",
   "scripts": {
-    "build": "mkdir -p dist && cp *.html dist/ && cp -r public/* dist/ 2>/dev/null || cp *.html dist/"
+    "build": "mkdir -p dist && cp *.html dist/ && cp -r public dist/"
   },
   "dependencies": {
     "stripe": "^17.3.1"
