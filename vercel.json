@@ -1,5 +1,11 @@
 {
-  "cleanUrls": true,
+  "framework": null,
+  "builds": [
+    {
+      "src": "pages/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
