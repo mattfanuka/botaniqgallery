@@ -235,6 +235,7 @@ main {
     gap: 1rem;
     width: 90%;
     max-width: 1800px;
+    margin: 0 auto;
 }
 
 .digital-print-container {
@@ -245,6 +246,7 @@ main {
     gap: 1rem;
     width: 90%;
     max-width: 1800px;
+    margin: 0 auto;
 }
 
 .watercolor-description,
@@ -584,4 +586,5 @@ main {
     }
 
 }
+
 
