@@ -203,7 +203,10 @@ function addToCart(cartItem) {
 
     //If its a watercolor, see if there's one in the cart. If not, add it
     if (isWaterColor) {
-        const isWaterColorInCart = cart.find(item => item.type === cartItem.type);
+        const isWaterColorInCart = cart.find(item => 
+          item.type === cartItem.type &&
+          item._id === cartItem._id
+        );
         if (isWaterColorInCart) {
             alert('Only one of each - every item is unique!');
             return;
@@ -244,3 +247,4 @@ function updateQuantity(cart) {
     quantityElement.innerText = quantity;
 
 }
+
