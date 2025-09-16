@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    font-family: "Libertinus Serif", serif;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #F4F1DE;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.header {
+    height: 5em;
+    width: 100%;
+    color: #E07A5F;
+    border-bottom: solid #E07A5F 2px;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+    box-shadow: 10px 0px 10px #30303073;
+}
+
+#tibby-name {
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0;
+}
+
+.header ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.header ul li {
+    margin: 0 1.5rem;
+    font-size: 1.5em;
+}
+
+.link {
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+.link::after {
+    display: block;
+    content: "";
+    position: absolute;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-bottom: solid 2px #E07A5F;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.75s ease-out;
+    z-index: -1;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+.contact {
+    background-color: #E07A5F;
+    color: #F4F1DE;
+    padding: 0.15em 0.45em 0.2em;
+    border: solid 2px #E07A5F;
+    border-radius: 25px;
+    transition: color .5s;
+}
+
+.contact:hover {
+    background-color: #F4F1DE;
+    color: #E07A5F;
+    cursor: pointer;
+}
+
+main {
+    display: block;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 7em auto 3.5em auto;
+    padding: 0 5em;
+    color: #3D405B;
+}
+
+.pictures {
+    position: relative;
+}
+
+.blob {
+    display: block;
+    margin: 0;
+    height: 600px;
+    width: 600px;
+    z-index: -1;
+}
+
+.selfie {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-55%, 20%);
+    height: 400px;
+    width: 400px;
+    border: solid 7px #3d405b;
+    border-radius: 50%;
+}
+
+.intro-text {
+    width: 40%;
+    margin: 3em 0 3em 0;
+    align-self: center;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-weight: 100;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.shop-bg {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #F2CC8F;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10, auto);
+    height: 100vh;
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.timeline-line {
+    border-right: solid 2px #E07A5F;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 60px;
+    left: 50%;
+}
+
+.holder {
+    grid-column: 1;
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.holder-right {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 0;
+    float: right;
+}
+
+.placeholder-right {
+    grid-column: 2;
+    width: 100%;
+    height: auto;
+}
+
+.entry-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 20%;
+    min-width: 400px;
+    color: #3D405B;
+    background-color:#fff2e7;
+    border: solid 2px #E07A5F;
+    border-radius: 10px;
+    padding: 0 2em;
+    margin: 0 1em 0 2em;
+    box-shadow: 5px 5px 15px rgba(48, 48, 48, 0.144)
+}
+
+.card h3 {
+    margin: 1em 0 0.25em 0;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 2;
+    grid-row: 1;
+    border-bottom: dotted 2px #E07A5F;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    color: #3D405B;
+    background-color: #fff2e7;
+    border: solid 2px #E07A5F;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.number.left {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.number.right {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}

@@ -189,4 +189,3 @@ function removeFromCart(product) {
     saveCart(cart);
 }
 
-

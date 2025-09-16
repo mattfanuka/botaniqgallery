@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Cabin", sans-serif;
+    font-family: "Source Serif 4", serif;
     --primary-blue: #458cff;
     --primary-yellow: #f79400;
     --off-white: #FFF8F0;
@@ -25,7 +25,7 @@ body {
     height: 7rem;
     width: 100%;
     color: var(--primary-yellow);
-    border-bottom: solid var(--primary-yellow) 2px;
+    border-bottom: solid var(--text-color) 2px;
     background-color: var(--off-white);
     position: fixed;
     top: 0;
@@ -35,7 +35,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5em;
-    box-shadow: 10px 0px 10px #30303073;
 }
 
 #tibby-name {
@@ -96,7 +95,6 @@ a {
     color: var(--off-white);
     padding: 0.15em 0.45em 0.2em;
     border: solid 2px var(--primary-yellow);
-    border-radius: 25px;
     transition: color .5s;
     text-decoration: none;
 }
@@ -112,9 +110,9 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -10;
-    background-color: var(--off-white);
+    background-color: var(--primary-yellow);
 }
 
 .bg-img {
@@ -129,54 +127,49 @@ a {
     user-select: none;
 }
 
+.hero {
+    display: flex;
+    align-items: stretch;
+    max-height: 800px;
+    border-bottom: 2px solid var(--text-color);
+    backdrop-filter: blur(10px);
+}
+
+.page-title, .container {
+    width: 70%;
+    margin: auto;
+
+}
+
+.hero-right {
+    border-left: 2px solid var(--text-color);
+    width: 50%;
+    display: flex;
+}
+
+.hero-left {
+    width: 50%
+}
+
+.img-holder {
+    flex: 1;
+    overflow: hidden;
+}
+
+.img-holder img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .container {
-    padding: 0 25% 1rem;
-    font-family: "Libertinus Serif", serif;
-    width: 100%;
-    min-height: 500px;
-    color: var(--primary-blue);
-}
-
-.parallax-bg {
-    background-image: url("../img/parallax-bg.jpg");
-    width: 100%;
-    height: 300px;
-    min-height: 300px;
-    z-index: -5;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.parallax-bg h1 {
-    font-family: "Birthstone";
-}
-
-.shadow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
     color: var(--text-color);
-    padding: 1em 2em;
-    
-    background-image: url("../img/text-bg.png");
-    background-size: contain; /* scales watercolor stroke */
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    border-radius: 100px;
+    margin-top: -2rem;
 }
 
 .container p {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 0;
 }
 
@@ -184,86 +177,107 @@ a {
     display: block;
     text-align: center;
     margin-bottom: 3rem;
-    margin-top: 7rem;
+    margin-top: 3rem;
 }
 
-.bouquet-wrapper {
-    flex: 0; 
-    float: right;
-    height: 400px;
-    margin: 0 0 0 1rem;
-}
-
-.bouquet-img {
-    width: 100%;
-    height: 100%;
+.page-title h1 {
+    font-family: 'Lathusca';
+    text-align: left;
+    font-size: 70px;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    margin: 0;
 }
 
 .email-form {
     margin: 1rem auto 5rem;
     width: 80%;
-    max-width: 1500px;
+    max-width: 800px;
     text-align: center;
-    background-color: var(--primary-yellow);
-    color: var(--off-white);
+    backdrop-filter: blur(10px);
+    border: solid 1px #94949465;
+    color: var(--text-color);
     padding: 1em 0;
-    border-radius: 25px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;   
     align-items: center;      
-    width: 100%;              
+    width: 80%;              
     margin: 0 auto;
 }
 
 .form-row {
     display: flex;
     justify-content: center;
-    width: 80%;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
     max-width: 1280px;
 }
 
 .form-row input {
-    flex: 1;
+    width: 100%;
     height: 3em;
-    margin: 0 0.5% 1rem;
+    margin: 0 0 1rem;
     border: none;
-    border-radius: 25px;
     padding: 0 0 0 1rem;
 }
 
 .email-body {
-    width: 80%;
+    width: 100%;
     max-width: 1280px;
 }
 
 .email-body textarea {
     width: 100%;
     border: none;
-    border-radius: 25px;
     padding: 1rem 0 0 1rem;
 }
 
-.email-form button {
+.email-btn {
     height: 3rem;
     width: 10rem;
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 1rem;
-    border: solid 3px var(--primary-yellow);
-    border-radius: 25px;
-    background-color: var(--off-white);
-    color: var(--primary-yellow);
+    border: none;
+    outline: none;
+    background-color: var(--text-color);
+    color: var(--off-white);
     transition: 0.4s;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
 }
 
-.email-form button:hover {
-    border: solid 3px var(--off-white);
-    background-color: var(--primary-yellow);
-    color: var(--off-white);
-    cursor: pointer;
+.btn-text {
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.email-btn::after {
+    content: '';
+    background-image: url('/public/img/send.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(250%, -50%);
+    height: 25px;
+    width: 25px;
+    z-index: 4;
+    transition: all 0.3s ease;
+}
+
+.email-btn:hover .btn-text {
+    transform: translateX(-50%);
+}
+
+.email-btn:hover::after {
+    transform: translate(25%, -50%);
 }
 
 #splotch1 {
@@ -317,12 +331,29 @@ a {
     font-family: sans-serif;
 }
 
+footer {
+    background:linear-gradient(145deg, #002258 0%, #00307c 100%);
+    padding-bottom: 1rem;
+    color: var(--off-white);
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
     width: 90%;
     max-width: 1800px;
     margin: 3rem auto;
+}
+
+.footer-bottom {
+    border-top: solid 1px var(--off-white);
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
 }
 
 .insta {
@@ -334,6 +365,11 @@ a {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
+}
+
+@font-face {
+    font-family: 'Lathusca';
+    src: url('../fonts/Awesome\ Lathusca.ttf')
 }
 
 @media screen and (max-width: 1000px) {
@@ -355,28 +391,42 @@ a {
         padding-top: 60px;
     }
 
-    .parallax-bg {
-        height: 20vh;
-        width: 100vw;
-        min-height: 100px;
+    .hero {
+        flex-direction: column;
+        max-height: unset;
+    }
+
+    .hero-left {
+        width: 100%;
+        padding: 0;
+    } 
+    
+    .hero-right {
+        width: 100%;
+        padding: 0;
+        height: 400px;
     }
 
     .page-title {
-        margin: 0;
+        margin: 0 auto;
+        width: 90%;
     }
+
+    .page-title h1 {
+        font-family: 'Lathusca';
+        font-size: 40px;
+        margin: 1rem auto 0.25rem;
+    }   
 
     .container {
-        margin-top: 1em;
-        padding: 1em;
-    }
-
-    .bouquet-wrapper {
-        height: 200px;
-        width: 150px;
+        margin: 0 auto;
+        padding: 0;
+        width: 90%;
     }
 
     .container p {
-        font-size: clamp(15px, 5vw, 25px);
+        font-size: 16px;
+        width: 100%;
     }
 
     .email-form {
@@ -391,17 +441,16 @@ a {
     .email-form button {
         font-size: 1em;
     }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 430px) {
     .form-row {
         flex-direction: column;
     }
-
-    .shadow h1 {
-        font-size: clamp(15px, 7vw, 30px);
-    }
-
     #name {
         box-sizing: border-box;
         font-size: 15px;

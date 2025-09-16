@@ -1,3 +1,4 @@
+
 const PROJECT_ID = 'glr4p8e1';
 const DATASET = 'production';
 const API_VERSION = '2025-08-19';
@@ -97,9 +98,10 @@ async function renderProducts() {
     products.prints.forEach(product => {
         const div = document.createElement('div');
         div.classList.add('product');
+        console.log(product.description)
         div.innerHTML = `
         <div class='image-holder'>
-            <img src=${product.image.url}>
+            <img src=${product.image.url} alt="${product.description}">
         </div>
         <span class='top-row'>
             <h2>${product.name}</h2>
@@ -204,9 +206,8 @@ function addToCart(cartItem) {
     //If its a watercolor, see if there's one in the cart. If not, add it
     if (isWaterColor) {
         const isWaterColorInCart = cart.find(item => 
-          item.type === cartItem.type &&
-          item._id === cartItem._id
-        );
+            item.type === cartItem.type &&
+            item.id === cartItem.id);
         if (isWaterColorInCart) {
             alert('Only one of each - every item is unique!');
             return;
@@ -247,4 +248,3 @@ function updateQuantity(cart) {
     quantityElement.innerText = quantity;
 
 }
-

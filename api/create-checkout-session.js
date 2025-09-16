@@ -54,7 +54,7 @@ export default async function handler(req, res) {
                         unit_amount: Math.round(product.price * 100), //cents
                     },
                     quantity: 1,
-                }
+                };
             }
             else if (item.type === 'print'){
                 const product = productsData.prints.find(i => i._id === item._id);
