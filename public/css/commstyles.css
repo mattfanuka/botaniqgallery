@@ -283,7 +283,7 @@ a {
 #splotch1 {
     width: 60vmin;
     height: 60vmin;
-    bottom: -10vh;
+    bottom: -10svh;
     left: -8vw;
     opacity: 100%;
     animation: 0.75s ease-out 0.25s backwards floatIn;
@@ -293,7 +293,7 @@ a {
     width: 60vmin;
     height: 60vmin;
     right: -0vw;
-    bottom: 5vh;
+    bottom: 5svh;
     opacity: 70%;
     animation: 0.75s ease-out 0.5s backwards floatIn;
 }
@@ -503,4 +503,5 @@ footer {
     }
 
 }
+
 
