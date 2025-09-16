@@ -4,7 +4,7 @@
     font-weight: 500;
     --primary-blue: #4A81D9;
     --primary-yellow: #F5D486;
-    --off-white: #fcffec;
+    --off-white: #f8fdff;
     --highlight: #FF4E50;
     --text-color: #2F2B38;
 }
@@ -616,4 +616,5 @@ footer {
     }
 
 }
+
 
